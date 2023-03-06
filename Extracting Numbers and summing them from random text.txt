@@ -1,0 +1,13 @@
+i=mport re
+if __name__ == '__main__':
+    hand = open('C:/Rt2.txt')
+    sum = 0
+    for line in hand:
+        line = line.rstrip()
+        res = re.findall('[0-9]+', line)
+        if len(res)!=0:
+            print(res)
+            for i in range(len(res)):
+               sum = sum+int(res[i])
+               print(sum)
+
